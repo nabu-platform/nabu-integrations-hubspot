@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-10-11T10:14:07.362+02:00" lastModified="2023-10-12T10:50:15.666+02:00" leaf="true" version="44">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.List.add</references>
+    <references>be.nabu.eai.module.services.crud.CRUDService$TotalCount</references>
+    <references>nabu.integrations.hubspot.out.feedbackSubmissions.services.search</references>
+    <references>nabu.utils.types.ParameterDescription</references>
+    <references>nabu.integrations.hubspot.out.tickets.services.get</references>
+    <references>be.nabu.eai.module.services.crud.api.CRUDProvider.list</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.utils.reflection.Type.describe</references>
+    <references>nabu.integrations.hubspot.out.objects.types.filterGroup</references>
+    <references>nabu.integrations.hubspot.out.deals.services.get</references>
+    <references>nabu.integrations.hubspot.out.contacts.services.search</references>
+    <references>java.lang.Long</references>
+    <references>nabu.utils.reflection.Type.details</references>
+    <references>nabu.integrations.hubspot.out.companies.services.get</references>
+    <references>nabu.integrations.hubspot.out.objects.services.search</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.reflection.Type.get</references>
+    <references>be.nabu.eai.module.services.crud.provider.CRUDMeta</references>
+    <references>nabu.integrations.hubspot.providers.crud.state</references>
+    <references>be.nabu.eai.module.services.crud.CRUDFilter</references>
+    <references>nabu.integrations.hubspot.out.objects.types.filter</references>
+    <references>nabu.integrations.hubspot.providers.crud.mapOperator</references>
+    <references>nabu.integrations.hubspot.out.contacts.services.get</references>
+    <references>nabu.utils.reflection.Type.set</references>
+    <references>nabu.integrations.hubspot.out.quotes.services.get</references>
+    <references>nabu.integrations.hubspot.out.objects.services.get</references>
+    <references>nabu.utils.reflection.Type.newInstance</references>
+    <references>be.nabu.eai.module.services.crud.ListResult</references>
+    <references>nabu.integrations.hubspot.out.objects.types.collectionResponseSimplePublicObjectWithAssociationsForwardPaging</references>
+    <references>nabu.utils.List.size</references>
+    <references>nabu.integrations.hubspot.out.objects.types.simplePublicObject</references>
+    <references>nabu.utils.Object.first</references>
+    <references>nabu.integrations.hubspot.out.products.services.get</references>
+    <references>nabu.integrations.hubspot.out.lineItems.services.get</references>
+    <references>nabu.utils.Object.last</references>
+    <references>nabu.integrations.hubspot.out.companies.services.search</references>
+    <references>java.lang.Object</references>
+    <references>nabu.integrations.hubspot.out.deals.services.search</references>
+</node>

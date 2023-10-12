@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<swaggerClient>
+    <allowDomain>false</allowDomain>
+    <allowUuid>true</allowUuid>
+    <endpoint>nabu.integrations.hubspot.out.endpoint</endpoint>
+    <exposeAllServices>false</exposeAllServices>
+    <folderStructure>PATH</folderStructure>
+    <lastLoadedUri>https://api.hubspot.com/api-catalog-public/v1/apis/crm/v3/objects/line_items</lastLoadedUri>
+    <lenient>true</lenient>
+    <operationAliases>
+        <property key="getCrmV3ObjectsLineItemsLineItemId">get</property>
+        <property key="deleteCrmV3ObjectsLineItemsLineItemId">delete</property>
+        <property key="patchCrmV3ObjectsLineItemsLineItemId">update</property>
+        <property key="getCrmV3ObjectsLineItems">list</property>
+        <property key="postCrmV3ObjectsLineItemsSearch">search</property>
+        <property key="postCrmV3ObjectsLineItems">create</property>
+    </operationAliases>
+    <operationIds>getCrmV3ObjectsLineItemsLineItemId</operationIds>
+    <operationIds>deleteCrmV3ObjectsLineItemsLineItemId</operationIds>
+    <operationIds>patchCrmV3ObjectsLineItemsLineItemId</operationIds>
+    <operationIds>getCrmV3ObjectsLineItems</operationIds>
+    <operationIds>postCrmV3ObjectsLineItemsSearch</operationIds>
+    <operationIds>postCrmV3ObjectsLineItems</operationIds>
+    <showInterfaces>false</showInterfaces>
+    <throwException>true</throwException>
+</swaggerClient>

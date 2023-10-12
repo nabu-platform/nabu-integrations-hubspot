@@ -1,0 +1,7 @@
+<structure interface="be.nabu.eai.module.types.structure.ModelGenerator.getModels" name="pipeline">
+    <structure name="input"/>
+    <structure definition="nabu.integrations.hubspot.out.schemas.types.collectionResponseObjectSchemaNoPaging" name="response" namespace="nabu.integrations.hubspot.out.schemas.types"/>
+    <structure name="output"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="builtinTypes" type="java.lang.String"/>
+    <structure definition="nabu.integrations.hubspot.out.properties.types.property" maxOccurs="unbounded" minOccurs="0" name="properties" namespace="nabu.integrations.hubspot.out.properties.types"/>
+</structure>

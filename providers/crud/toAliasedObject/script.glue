@@ -1,0 +1,7 @@
+object ?= null
+# don't include id!
+object/id = null
+# the stringification will take the alias
+# when parsing again, it will take the correct fields
+@return
+object = json.objectify(json.stringify(object))

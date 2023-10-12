@@ -1,0 +1,50 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="1f8f1c09c42d4e9587e2606201b8733f"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Built-in types"
+			disabled="false"
+			id="c9e05a587d024e7389d47438db183fcc"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="9bf38ca4c4114c74aa50f8b762812aaa"
+				serviceId="nabu.utils.String.split"
+				resultName="resultfde70033510f44429e5686801ae86751"
+				temporaryMapping="true"
+				x="177"
+				y="79"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="2b8f3c8630d042afb5be4b26209967ea"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>companies,contacts,deals,tickets,products,quotes,line_items,feedback_submissions</from>
+				<to>string</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="0d6400a16c9e401c9fbb8189d9c211bb"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>,</from>
+				<to>separator</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="5b1b2f9ad8d941e9b6e93d02b306ae04"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultfde70033510f44429e5686801ae86751/parts</from>
+			<to>output/builtinTypes</to>
+		</steps>
+	</steps>
+</sequence>

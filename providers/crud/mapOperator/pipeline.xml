@@ -1,0 +1,8 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="nabuOperator" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <field name="hubspotOperator" type="java.lang.String"/>
+    </structure>
+</structure>

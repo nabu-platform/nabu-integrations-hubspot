@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<swaggerClient>
+    <allowDomain>false</allowDomain>
+    <allowUuid>true</allowUuid>
+    <endpoint>nabu.integrations.hubspot.out.endpoint</endpoint>
+    <exposeAllServices>false</exposeAllServices>
+    <folderStructure>PATH</folderStructure>
+    <lastLoadedUri>https://api.hubspot.com/api-catalog-public/v1/apis/crm/v3/objects/quotes</lastLoadedUri>
+    <lenient>true</lenient>
+    <operationAliases>
+        <property key="getCrmV3ObjectsQuotesQuoteId">get</property>
+        <property key="deleteCrmV3ObjectsQuotesQuoteId">delete</property>
+        <property key="patchCrmV3ObjectsQuotesQuoteId">update</property>
+        <property key="getCrmV3ObjectsQuotes">list</property>
+        <property key="postCrmV3ObjectsQuotes">create</property>
+        <property key="postCrmV3ObjectsQuotesSearch">search</property>
+    </operationAliases>
+    <operationIds>getCrmV3ObjectsQuotesQuoteId</operationIds>
+    <operationIds>deleteCrmV3ObjectsQuotesQuoteId</operationIds>
+    <operationIds>patchCrmV3ObjectsQuotesQuoteId</operationIds>
+    <operationIds>getCrmV3ObjectsQuotes</operationIds>
+    <operationIds>postCrmV3ObjectsQuotes</operationIds>
+    <operationIds>postCrmV3ObjectsQuotesSearch</operationIds>
+    <showInterfaces>false</showInterfaces>
+    <throwException>true</throwException>
+</swaggerClient>

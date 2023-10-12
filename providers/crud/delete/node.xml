@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-10-11T10:13:48.376+02:00" lastModified="2023-10-12T10:58:20.086+02:00" leaf="true" version="11">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>be.nabu.eai.module.services.crud.provider.CRUDMeta</references>
+    <references>nabu.integrations.hubspot.out.companies.services.delete</references>
+    <references>nabu.integrations.hubspot.out.tickets.services.delete</references>
+    <references>nabu.integrations.hubspot.out.objects.services.delete</references>
+    <references>nabu.integrations.hubspot.out.contacts.services.delete</references>
+    <references>nabu.integrations.hubspot.out.quotes.services.delete</references>
+    <references>nabu.integrations.hubspot.out.deals.services.delete</references>
+    <references>nabu.utils.reflection.Type.details</references>
+    <references>nabu.utils.Object.first</references>
+    <references>nabu.integrations.hubspot.out.products.services.delete</references>
+    <references>be.nabu.eai.module.services.crud.api.CRUDProvider.delete</references>
+    <references>java.lang.Object</references>
+    <references>java.lang.String</references>
+    <references>nabu.integrations.hubspot.out.lineItems.services.delete</references>
+</node>

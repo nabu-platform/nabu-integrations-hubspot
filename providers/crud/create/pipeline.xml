@@ -1,0 +1,9 @@
+<structure interface="be.nabu.eai.module.services.crud.api.CRUDProvider.create" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure name="parameters">
+        <field minOccurs="0" name="objectType" type="java.lang.String"/>
+        <structure definition="nabu.integrations.hubspot.out.objects.types.simplePublicObjectInput" name="body" namespace="nabu.integrations.hubspot.out.objects.types"/>
+    </structure>
+    <structure definition="nabu.integrations.hubspot.out.objects.types.simplePublicObject" name="created" namespace="nabu.integrations.hubspot.out.objects.types"/>
+</structure>

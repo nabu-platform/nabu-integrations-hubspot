@@ -1,0 +1,11 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="hubspotType" type="java.lang.String"/>
+        <field minOccurs="0" name="name" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <field name="internalType" type="java.lang.String"/>
+        <field minOccurs="0" name="format" type="java.lang.String"/>
+    </structure>
+    <field maxOccurs="unbounded" minOccurs="0" name="supportedTypes" type="java.lang.String"/>
+</structure>

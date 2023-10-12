@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<swaggerClient>
+    <allowDomain>false</allowDomain>
+    <allowUuid>true</allowUuid>
+    <endpoint>nabu.integrations.hubspot.out.endpoint</endpoint>
+    <exposeAllServices>false</exposeAllServices>
+    <folderStructure>PATH</folderStructure>
+    <lastLoadedUri>https://api.hubspot.com/api-catalog-public/v1/apis/crm/v3/schemas</lastLoadedUri>
+    <lenient>true</lenient>
+    <operationAliases>
+        <property key="getCrmObjectSchemasV3Schemas">schema.list</property>
+    </operationAliases>
+    <operationIds>getCrmObjectSchemasV3Schemas</operationIds>
+    <showInterfaces>false</showInterfaces>
+    <throwException>true</throwException>
+</swaggerClient>

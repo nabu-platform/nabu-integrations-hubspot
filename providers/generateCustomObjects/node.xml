@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-10-04T09:12:35.892+02:00" lastModified="2023-10-11T17:27:06.121+02:00" leaf="true" version="29">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.integrations.hubspot.out.schemas.types.collectionResponseObjectSchemaNoPaging</references>
+    <references>be.nabu.eai.module.types.structure.ModelGenerator.getModels</references>
+    <references>nabu.integrations.hubspot.providers.mapTypes</references>
+    <references>nabu.integrations.hubspot.providers.getBuiltinTypes</references>
+    <references>nabu.integrations.hubspot.out.properties.services.properties.list</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.String.conventionize</references>
+    <references>be.nabu.eai.module.types.structure.StructureModel</references>
+    <references>nabu.integrations.hubspot.out.properties.types.property</references>
+    <references>nabu.integrations.hubspot.out.schemas.services.schema.list</references>
+</node>

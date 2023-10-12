@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<crudProvider>
+    <createService>nabu.integrations.hubspot.providers.crud.create</createService>
+    <deleteService>nabu.integrations.hubspot.providers.crud.delete</deleteService>
+    <listService>nabu.integrations.hubspot.providers.crud.list</listService>
+    <updateService>nabu.integrations.hubspot.providers.crud.update</updateService>
+</crudProvider>

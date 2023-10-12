@@ -1,0 +1,4 @@
+The list service itself does not provide support for decent paging, it uses an "after" which seems to be the numeric id of the last document in the list + 1 (regardless of whether or not that +1 is of the same type).
+This approach precludes things like sorting etc because it _needs_ to be sorted according to incremental id to work.
+This approach also does not allow us to easily support "arbitrary" paging like requesting page 5 without having requested page 4.
+Luckily the search uses a more conventional approach so we use that instead of listing

@@ -1,0 +1,4 @@
+<structure name="state">
+    <field name="offset" type="java.lang.Long"/>
+    <field name="after" type="java.lang.String"/>
+</structure>

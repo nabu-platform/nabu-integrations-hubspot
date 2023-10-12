@@ -1,0 +1,144 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="21a8b66218e248eeb9fa827dd5234dea"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="List supported types"
+			disabled="false"
+			id="8c254dc8786b4212a26d03fe57543cf2"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="99e59a2e19844be78b0875e626024115"
+				serviceId="nabu.utils.String.split"
+				resultName="result4f4d6ad071eb47269f2ccbe0eea6251f"
+				temporaryMapping="true"
+				x="24"
+				y="63"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="d484edef45074257a8f7b2fd2b818ec2"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>string,boolean,int,long,double,dateTime,uuid</from>
+				<to>string</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="b1cec8c2f88d4c4c8de6d99cd646528d"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>,</from>
+				<to>separator</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="154e80917cc546a7966a2066481933ea"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result4f4d6ad071eb47269f2ccbe0eea6251f/parts</from>
+			<to>supportedTypes</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
+			disabled="false"
+			id="9e18f42e5a894fc7b058c5cc8eb78f54"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="7a8cd71aa4f649ae879b4252f727a598"
+				label="input/hubspotType # supportedTypes"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7e921c62672a4340a8caae3f1878a1df"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/hubspotType</from>
+				<to>output/internalType</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
+				disabled="false"
+				id="3389947335334f919fbb9ddbf3d96b32"
+				label="input/hubspotType == &quot;number&quot;"
+				lineNumber="5">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					id="e2a87bfb72d34ef598a9073dcac20e08"
+					label="input/name ~ &quot;.*id.*&quot;"
+					lineNumber="6">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="467ea31197a64eafb6b2e7945233015d"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>long</from>
+					<to>output/internalType</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					id="7a7ee96faf2e434c9a122ae82a82eb8a"
+					lineNumber="7">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="dfe96c019e1a4c6fb6c846fe0ad0ad17"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>double</from>
+					<to>output/internalType</to>
+				</steps>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="f63c5e5ac37942669e7640bba4023e61"
+				label="input/hubspotType == &quot;date&quot;"
+				lineNumber="8">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="4585178651774de5b53a191e77c8b2b7"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>dateTime</from>
+				<to>output/internalType</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="5ea6afa2a0e9473daaeaa9cc8da1c5f1"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>date</from>
+				<to>output/format</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="Defaults to string"
+				disabled="false"
+				id="a4cc97ac83f34d7e8244e951df86f665"
+				lineNumber="9">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="767e8ee66d6f411799614d90a66aa7f6"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>string</from>
+				<to>output/internalType</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

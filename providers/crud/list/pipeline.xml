@@ -1,0 +1,14 @@
+<structure interface="be.nabu.eai.module.services.crud.api.CRUDProvider.list" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <field name="typeName" type="java.lang.String"/>
+    <structure definition="nabu.utils.types.ParameterDescription" maxOccurs="unbounded" minOccurs="0" name="parameters"/>
+    <structure definition="nabu.integrations.hubspot.out.objects.types.collectionResponseSimplePublicObjectWithAssociationsForwardPaging" name="body" namespace="nabu.integrations.hubspot.out.objects.types"/>
+    <structure definition="nabu.integrations.hubspot.providers.crud.state" name="queryState"/>
+    <structure definition="nabu.integrations.hubspot.out.objects.types.filterGroup" maxOccurs="unbounded" minOccurs="0" name="filterGroups" namespace="nabu.integrations.hubspot.out.objects.types"/>
+    <structure definition="nabu.integrations.hubspot.out.objects.types.filterGroup" name="lastFilterGroup" namespace="nabu.integrations.hubspot.out.objects.types"/>
+    <structure definition="nabu.integrations.hubspot.out.objects.types.filter" name="hubspotFilter" namespace="nabu.integrations.hubspot.out.objects.types"/>
+    <structure definition="nabu.integrations.hubspot.out.objects.types.simplePublicObject" maxOccurs="unbounded" minOccurs="0" name="results" namespace="nabu.integrations.hubspot.out.objects.types"/>
+    <field minOccurs="0" name="sizeOfList" type="java.lang.Integer"/>
+    <field minOccurs="0" name="amountOfFilters" type="java.lang.Integer"/>
+</structure>
