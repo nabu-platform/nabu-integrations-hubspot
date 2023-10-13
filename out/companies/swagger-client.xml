@@ -17,9 +17,11 @@
         <property key="patchCrmV3ObjectsCompaniesCompanyId">update</property>
         <property key="postCrmV3ObjectsCompaniesBatchCreate">batch.create</property>
         <property key="postCrmV3ObjectsCompaniesBatchArchive">batch.archive</property>
-        <property key="postCrmV3ObjectsCompaniesBatchRead">batch.read</property>
+        <property key="postCrmV3ObjectsCompaniesBatchRead">getAll</property>
         <property key="postCrmV3ObjectsCompaniesBatchUpdate">batch.update</property>
         <property key="getCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectType">association.list</property>
+        <property key="putCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectTypeToObjectId">association.create</property>
+        <property key="deleteCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectTypeToObjectId">association.delete</property>
     </operationAliases>
     <operationIds>getCrmV3ObjectsCompanies</operationIds>
     <operationIds>postCrmV3ObjectsCompanies</operationIds>
@@ -28,6 +30,9 @@
     <operationIds>postCrmV3ObjectsCompaniesSearch</operationIds>
     <operationIds>deleteCrmV3ObjectsCompaniesCompanyId</operationIds>
     <operationIds>getCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectType</operationIds>
+    <operationIds>putCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectTypeToObjectId</operationIds>
+    <operationIds>deleteCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectTypeToObjectId</operationIds>
+    <operationIds>postCrmV3ObjectsCompaniesBatchRead</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

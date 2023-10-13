@@ -15,6 +15,10 @@
         <property key="getCrmV3ObjectsObjectTypeObjectId">get</property>
         <property key="deleteCrmV3ObjectsObjectTypeObjectId">delete</property>
         <property key="patchCrmV3ObjectsObjectTypeObjectId">update</property>
+        <property key="getCrmV3ObjectsObjectTypeObjectIdAssociationsToObjectType">association.list</property>
+        <property key="putCrmV3ObjectsObjectTypeObjectIdAssociationsToObjectTypeToObjectIdAssociationType">association.create</property>
+        <property key="deleteCrmV3ObjectsObjectTypeObjectIdAssociationsToObjectTypeToObjectIdAssociationType">association.delete</property>
+        <property key="postCrmV3ObjectsObjectTypeBatchRead">getAll</property>
     </operationAliases>
     <operationIds>getCrmV3ObjectsObjectType</operationIds>
     <operationIds>postCrmV3ObjectsObjectType</operationIds>
@@ -22,6 +26,10 @@
     <operationIds>getCrmV3ObjectsObjectTypeObjectId</operationIds>
     <operationIds>deleteCrmV3ObjectsObjectTypeObjectId</operationIds>
     <operationIds>patchCrmV3ObjectsObjectTypeObjectId</operationIds>
+    <operationIds>getCrmV3ObjectsObjectTypeObjectIdAssociationsToObjectType</operationIds>
+    <operationIds>putCrmV3ObjectsObjectTypeObjectIdAssociationsToObjectTypeToObjectIdAssociationType</operationIds>
+    <operationIds>deleteCrmV3ObjectsObjectTypeObjectIdAssociationsToObjectTypeToObjectIdAssociationType</operationIds>
+    <operationIds>postCrmV3ObjectsObjectTypeBatchRead</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

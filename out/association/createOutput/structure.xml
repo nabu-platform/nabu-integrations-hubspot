@@ -1,0 +1,6 @@
+<structure name="anonymous">
+    <field name="fromObjectTypeId" type="java.lang.String"/>
+    <field name="fromObjectId" type="java.lang.Long"/>
+    <field name="toObjectTypeId" type="java.lang.String"/>
+    <field name="toObjectId" type="java.lang.Long"/>
+</structure>

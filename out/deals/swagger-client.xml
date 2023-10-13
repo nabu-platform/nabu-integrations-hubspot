@@ -14,6 +14,7 @@
         <property key="getCrmV3ObjectsDeals">list</property>
         <property key="postCrmV3ObjectsDeals">create</property>
         <property key="postCrmV3ObjectsDealsSearch">search</property>
+        <property key="postCrmV3ObjectsDealsBatchRead">getAll</property>
     </operationAliases>
     <operationIds>getCrmV3ObjectsDealsDealId</operationIds>
     <operationIds>deleteCrmV3ObjectsDealsDealId</operationIds>
@@ -21,6 +22,7 @@
     <operationIds>getCrmV3ObjectsDeals</operationIds>
     <operationIds>postCrmV3ObjectsDeals</operationIds>
     <operationIds>postCrmV3ObjectsDealsSearch</operationIds>
+    <operationIds>postCrmV3ObjectsDealsBatchRead</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

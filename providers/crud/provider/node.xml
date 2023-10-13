@@ -3,7 +3,9 @@
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
-    <properties/>
+    <properties>
+        <property key="crudProvider">hubspot</property>
+    </properties>
     <references>nabu.integrations.hubspot.providers.crud.create</references>
     <references>nabu.integrations.hubspot.providers.crud.delete</references>
     <references>nabu.integrations.hubspot.providers.crud.list</references>

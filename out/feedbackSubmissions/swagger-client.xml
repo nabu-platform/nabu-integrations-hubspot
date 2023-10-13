@@ -9,8 +9,10 @@
     <lenient>true</lenient>
     <operationAliases>
         <property key="postCrmV3ObjectsFeedbackSubmissionsSearch">search</property>
+        <property key="postCrmV3ObjectsFeedbackSubmissionsBatchRead">getAll</property>
     </operationAliases>
     <operationIds>postCrmV3ObjectsFeedbackSubmissionsSearch</operationIds>
+    <operationIds>postCrmV3ObjectsFeedbackSubmissionsBatchRead</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

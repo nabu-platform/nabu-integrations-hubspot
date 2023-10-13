@@ -15,6 +15,9 @@
         <property key="deleteCrmV3ObjectsContactsContactId">delete</property>
         <property key="patchCrmV3ObjectsContactsContactId">update</property>
         <property key="getCrmV4ObjectsContactsContactIdAssociationsToObjectType">association.list</property>
+        <property key="putCrmV4ObjectsContactsContactIdAssociationsToObjectTypeToObjectId">association.create</property>
+        <property key="deleteCrmV4ObjectsContactsContactIdAssociationsToObjectTypeToObjectId">association.delete</property>
+        <property key="postCrmV3ObjectsContactsBatchRead">getAll</property>
     </operationAliases>
     <operationIds>getCrmV3ObjectsContacts</operationIds>
     <operationIds>postCrmV3ObjectsContacts</operationIds>
@@ -23,6 +26,9 @@
     <operationIds>deleteCrmV3ObjectsContactsContactId</operationIds>
     <operationIds>patchCrmV3ObjectsContactsContactId</operationIds>
     <operationIds>getCrmV4ObjectsContactsContactIdAssociationsToObjectType</operationIds>
+    <operationIds>putCrmV4ObjectsContactsContactIdAssociationsToObjectTypeToObjectId</operationIds>
+    <operationIds>deleteCrmV4ObjectsContactsContactIdAssociationsToObjectTypeToObjectId</operationIds>
+    <operationIds>postCrmV3ObjectsContactsBatchRead</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

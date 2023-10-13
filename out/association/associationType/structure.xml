@@ -1,0 +1,5 @@
+<structure name="associationTypes">
+    <field name="category" type="java.lang.String"/>
+    <field name="typeId" type="java.lang.Long"/>
+    <field name="label" type="java.lang.String"/>
+</structure>

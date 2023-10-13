@@ -1,0 +1,6 @@
+<structure name="path">
+    <field name="objectType" type="java.lang.String"/>
+    <field name="objectId" type="java.lang.String"/>
+    <field name="toObjectType" type="java.lang.String"/>
+    <field name="toObjectId" type="java.lang.String"/>
+</structure>

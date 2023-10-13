@@ -2,6 +2,8 @@
 <restEndpoint>
     <gzip>true</gzip>
     <host>api.hubapi.com</host>
+    <requestType>JSON</requestType>
+    <responseType>JSON</responseType>
     <secure>true</secure>
     <securityContext>hubspot</securityContext>
     <securityType>basic</securityType>

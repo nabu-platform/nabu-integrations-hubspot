@@ -1,0 +1,14 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field comment="The generated type that represents the hubspot data model" name="fromTypeId" type="java.lang.String"/>
+        <field comment="The generated type that represents the hubspot data model" name="toTypeId" type="java.lang.String"/>
+        <field comment="The id of the &quot;from&quot; object" name="fromObjectId" type="java.lang.String"/>
+        <field minOccurs="0" name="limit" type="java.lang.Integer"/>
+    </structure>
+    <structure name="output">
+        <structure definition="nabu.integrations.hubspot.out.association.listOutputEntry" maxOccurs="unbounded" minOccurs="0" name="associations"/>
+    </structure>
+    <field name="fromCollection" type="java.lang.String"/>
+    <field name="toCollection" type="java.lang.String"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="builtinTypes" type="java.lang.String"/>
+</structure>

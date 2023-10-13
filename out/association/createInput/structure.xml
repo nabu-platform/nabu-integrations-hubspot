@@ -1,0 +1,6 @@
+<structure name="associationList">
+    <structure maxOccurs="unbounded" name="associations">
+        <field name="associationCategory" type="java.lang.String"/>
+        <field name="associationTypeId" type="java.lang.Long"/>
+    </structure>
+</structure>

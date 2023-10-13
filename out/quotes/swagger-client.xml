@@ -14,6 +14,7 @@
         <property key="getCrmV3ObjectsQuotes">list</property>
         <property key="postCrmV3ObjectsQuotes">create</property>
         <property key="postCrmV3ObjectsQuotesSearch">search</property>
+        <property key="postCrmV3ObjectsQuotesBatchRead">getAll</property>
     </operationAliases>
     <operationIds>getCrmV3ObjectsQuotesQuoteId</operationIds>
     <operationIds>deleteCrmV3ObjectsQuotesQuoteId</operationIds>
@@ -21,6 +22,7 @@
     <operationIds>getCrmV3ObjectsQuotes</operationIds>
     <operationIds>postCrmV3ObjectsQuotes</operationIds>
     <operationIds>postCrmV3ObjectsQuotesSearch</operationIds>
+    <operationIds>postCrmV3ObjectsQuotesBatchRead</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

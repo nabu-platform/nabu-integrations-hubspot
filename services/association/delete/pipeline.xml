@@ -1,0 +1,11 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field comment="The generated type that represents the hubspot data model" name="fromTypeId" type="java.lang.String"/>
+        <field comment="The generated type that represents the hubspot data model" name="toTypeId" type="java.lang.String"/>
+        <field comment="The id of the &quot;from&quot; object" name="fromObjectId" type="java.lang.String"/>
+        <field comment="The id of the &quot;to&quot; object" name="toObjectId" type="java.lang.String"/>
+    </structure>
+    <structure name="output"/>
+    <field name="fromCollection" type="java.lang.String"/>
+    <field name="toCollection" type="java.lang.String"/>
+</structure>

@@ -11,4 +11,6 @@
     <structure definition="nabu.integrations.hubspot.out.objects.types.simplePublicObject" maxOccurs="unbounded" minOccurs="0" name="results" namespace="nabu.integrations.hubspot.out.objects.types"/>
     <field minOccurs="0" name="sizeOfList" type="java.lang.Integer"/>
     <field minOccurs="0" name="amountOfFilters" type="java.lang.Integer"/>
+    <field minOccurs="0" name="amountOfValues" type="java.lang.Integer"/>
+    <structure definition="nabu.integrations.hubspot.out.companies.types.simplePublicObjectId" maxOccurs="unbounded" minOccurs="0" name="getAllIds" namespace="nabu.integrations.hubspot.out.companies.types"/>
 </structure>

@@ -14,6 +14,7 @@
         <property key="patchCrmV3ObjectsTicketsTicketId">update</property>
         <property key="getCrmV3ObjectsTicketsTicketId">get</property>
         <property key="deleteCrmV3ObjectsTicketsTicketId">delete</property>
+        <property key="postCrmV3ObjectsTicketsBatchRead">getAll</property>
     </operationAliases>
     <operationIds>getCrmV3ObjectsTickets</operationIds>
     <operationIds>postCrmV3ObjectsTicketsSearch</operationIds>
@@ -21,6 +22,7 @@
     <operationIds>patchCrmV3ObjectsTicketsTicketId</operationIds>
     <operationIds>getCrmV3ObjectsTicketsTicketId</operationIds>
     <operationIds>deleteCrmV3ObjectsTicketsTicketId</operationIds>
+    <operationIds>postCrmV3ObjectsTicketsBatchRead</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

@@ -108,6 +108,15 @@
 					<from>result694394cd5a8946639c2cd3ea058bd7ea/conventionized</from>
 					<to>output/models[0]/name</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="ab27722ff5c84bc59553038cd1c30aff"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>hubspot</from>
+					<to>output/models[0]/collectionCrudProvider</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Add primary id"
@@ -441,6 +450,15 @@
 						fixedValue="false">
 					<from>builtinType</from>
 					<to>output/models[0]/name</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="6206a130bbcd487e85e10c9cd2b1e670"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>hubspot</from>
+					<to>output/models[0]/collectionCrudProvider</to>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"

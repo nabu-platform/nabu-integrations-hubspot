@@ -1,0 +1,4 @@
+<structure name="results">
+    <field name="toObjectId" type="java.lang.Long"/>
+    <structure definition="nabu.integrations.hubspot.out.associations.types.associationSpecWithLabel" maxOccurs="unbounded" minOccurs="0" name="associationTypes" namespace="nabu.integrations.hubspot.out.associations.types"/>
+</structure>

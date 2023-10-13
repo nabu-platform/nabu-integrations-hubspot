@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restClient>
+    <method>DELETE</method>
+    <path>/crm/v4/objects/{objectType}/{objectId}/associations/{toObjectType}/{toObjectId}</path>
+    <lenient>true</lenient>
+    <ignoreRootIfArrayWrapper>true</ignoreRootIfArrayWrapper>
+    <endpoint>nabu.integrations.hubspot.out.endpoint</endpoint>
+</restClient>

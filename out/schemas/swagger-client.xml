@@ -9,8 +9,12 @@
     <lenient>true</lenient>
     <operationAliases>
         <property key="getCrmObjectSchemasV3Schemas">schema.list</property>
+        <property key="postCrmObjectSchemasV3SchemasObjectTypeAssociations">association.list</property>
+        <property key="deleteCrmObjectSchemasV3SchemasObjectTypeAssociationsAssociationIdentifier">association.delete</property>
     </operationAliases>
     <operationIds>getCrmObjectSchemasV3Schemas</operationIds>
+    <operationIds>postCrmObjectSchemasV3SchemasObjectTypeAssociations</operationIds>
+    <operationIds>deleteCrmObjectSchemasV3SchemasObjectTypeAssociationsAssociationIdentifier</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

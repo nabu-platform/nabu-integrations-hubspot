@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restClient>
+    <method>PUT</method>
+    <path>/crm/v4/objects/{objectType}/{objectId}/associations/default/{toObjectType}/{toObjectId}</path>
+    <output>nabu.integrations.hubspot.out.association.createOutput</output>
+    <lenient>true</lenient>
+    <ignoreRootIfArrayWrapper>true</ignoreRootIfArrayWrapper>
+    <endpoint>nabu.integrations.hubspot.out.endpoint</endpoint>
+</restClient>

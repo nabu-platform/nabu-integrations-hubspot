@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.swagger.client.SwaggerClientManager" created="2023-10-13T10:38:09.906+02:00" lastModified="2023-10-13T10:46:38.155+02:00" leaf="false" version="7">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.integrations.hubspot.out.endpoint</references>
+</node>
