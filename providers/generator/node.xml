@@ -3,7 +3,9 @@
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
-    <properties/>
+    <properties>
+        <property key="name">Hubspot</property>
+    </properties>
     <references>nabu.integrations.hubspot.out.schemas.types.collectionResponseObjectSchemaNoPaging</references>
     <references>be.nabu.eai.module.types.structure.ModelGenerator.getModels</references>
     <references>nabu.integrations.hubspot.providers.mapTypes</references>
