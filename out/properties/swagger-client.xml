@@ -9,8 +9,16 @@
     <lenient>true</lenient>
     <operationAliases>
         <property key="getCrmV3PropertiesObjectType">properties.list</property>
+        <property key="postCrmV3PropertiesObjectType">properties.create</property>
+        <property key="patchCrmV3PropertiesObjectTypePropertyName">properties.update</property>
+        <property key="deleteCrmV3PropertiesObjectTypePropertyName">properties.delete</property>
+        <property key="getCrmV3PropertiesObjectTypePropertyName">properties.get</property>
     </operationAliases>
     <operationIds>getCrmV3PropertiesObjectType</operationIds>
+    <operationIds>getCrmV3PropertiesObjectTypePropertyName</operationIds>
+    <operationIds>patchCrmV3PropertiesObjectTypePropertyName</operationIds>
+    <operationIds>deleteCrmV3PropertiesObjectTypePropertyName</operationIds>
+    <operationIds>postCrmV3PropertiesObjectType</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
 </swaggerClient>

@@ -1,0 +1,6 @@
+<structure interface="nabu.frameworks.notifications.specs.checkState" name="pipeline">
+    <structure name="input" restrict="properties">
+        <structure definition="nabu.integrations.hubspot.providers.notifications.sendProperties" name="properties"/>
+    </structure>
+    <structure name="output"/>
+</structure>

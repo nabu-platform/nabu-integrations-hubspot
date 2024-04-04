@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.swagger.client.SwaggerClientManager" created="2023-09-28T10:36:16.197+02:00" lastModified="2024-03-21T12:50:02.883+01:00" leaf="false" version="9">
+<node artifactManager="be.nabu.eai.module.swagger.client.SwaggerClientManager" created="2024-03-19T16:56:44.495+01:00" lastModified="2024-03-19T16:58:10.462+01:00" leaf="false" version="5">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>

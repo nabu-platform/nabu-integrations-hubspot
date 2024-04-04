@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2024-03-29T10:00:09.961+01:00" lastModified="2024-03-29T11:54:57.881+01:00" leaf="true" version="6">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.frameworks.notifications.specs.checkState</references>
+    <references>nabu.integrations.hubspot.providers.notifications.sendProperties</references>
+    <references>nabu.integrations.hubspot.providers.notifications.isFinalState</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.Object</references>
+    <references>nabu.integrations.hubspot.out.transactional.check</references>
+    <references>java.lang.String</references>
+    <references>java.util.UUID</references>
+</node>

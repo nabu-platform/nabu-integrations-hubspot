@@ -1,0 +1,6 @@
+<structure name="basicTicket">
+    <field comment="Eg 0" name="hs_pipeline" type="java.lang.String"/>
+    <field comment="Eg 1" name="hs_pipeline_stage" type="java.lang.String"/>
+    <field comment="Eg HIGH" minOccurs="0" name="hs_ticket_priority" type="java.lang.String"/>
+    <field name="subject" type="java.lang.String"/>
+</structure>

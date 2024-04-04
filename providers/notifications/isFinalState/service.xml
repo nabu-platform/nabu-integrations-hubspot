@@ -1,0 +1,19 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="ae50e985e4c64f19a66f27d72f3cce5c"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="603a3a77bafc4977b9dcea622556ac6f"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="e6f638ef0955447e9acc4c53ee290816"
+				mask="false"
+				optional="false"
+				fixedValue="true">
+			<from>=input/state != "PENDING" &amp;&amp; input/state != "PROCESSING"</from>
+			<to>output/final</to>
+		</steps>
+	</steps>
+</sequence>

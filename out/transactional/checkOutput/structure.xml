@@ -1,0 +1,9 @@
+<structure name="checkOutput">
+    <field comment="an enumeration that represents the email's send status." name="sendResult" type="java.lang.String"/>
+    <field comment=" the timestamp from when the send was requested." name="requestedAt" type="java.util.Date"/>
+    <field comment=" the timestamp when the send began processing." minOccurs="0" name="startedAt" type="java.util.Date"/>
+    <field comment="the timestamp when the send completed." minOccurs="0" name="completedAt" type="java.util.Date"/>
+    <field comment="an identifier that can be used to query the status of the send." name="statusId" type="java.lang.String"/>
+    <field comment="the status of the send request. Includes PENDING, PROCESSING, CANCELED, and COMPLETE." name="status" type="java.lang.String"/>
+    <field comment="if sent, the ID and created timestamp of the sent event." minOccurs="0" name="eventId" type="java.lang.String"/>
+</structure>
