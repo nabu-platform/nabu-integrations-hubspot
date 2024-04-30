@@ -1,0 +1,18 @@
+<structure name="anonymous">
+    <field name="id" type="java.lang.String"/>
+    <field name="createdAt" type="java.util.Date"/>
+    <field name="updatedAt" type="java.util.Date"/>
+    <field name="archived" type="java.lang.Boolean"/>
+    <field name="parentFolderId" type="java.lang.String"/>
+    <field name="name" type="java.lang.String"/>
+    <field name="path" type="java.lang.String"/>
+    <field name="size" type="java.lang.Long"/>
+    <field name="type" type="java.lang.String"/>
+    <field name="extension" type="java.lang.String"/>
+    <field name="defaultHostingUrl" type="java.lang.String"/>
+    <field name="url" type="java.lang.String"/>
+    <field minOccurs="0" name="isUsableInContent" type="java.lang.Boolean"/>
+    <field name="access" type="nabu.integrations.hubspot.out.file.accessType"/>
+    <field minOccurs="0" name="fileMd5" type="java.lang.String"/>
+    <field minOccurs="0" name="sourceGroup" type="java.lang.String"/>
+</structure>

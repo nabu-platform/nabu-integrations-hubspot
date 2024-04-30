@@ -1,0 +1,12 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="email" type="java.lang.String"/>
+        <field maxOccurs="unbounded" name="whitelistedDomains" type="java.lang.String"/>
+        <field minOccurs="0" name="override" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <field name="email" type="java.lang.String"/>
+    </structure>
+    <field maxOccurs="unbounded" minOccurs="0" name="parts" type="java.lang.String"/>
+    <field minOccurs="0" name="amountOfParts" type="java.lang.Integer"/>
+</structure>

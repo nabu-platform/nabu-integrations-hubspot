@@ -1960,21 +1960,21 @@
 						</steps>
 						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 								disabled="false"
-								id="87454b79d9e34dbe9f7ab9ad3994655c"
-								mask="false"
-								optional="false"
-								fixedValue="false">
-							<from>filter/key</from>
-							<to>hubspotFilter/propertyName</to>
-						</steps>
-						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-								disabled="false"
 								id="45185b2dcefb4d26afe93e8797232e1d"
 								mask="false"
 								optional="false"
 								fixedValue="true">
 							<from>IN</from>
 							<to>hubspotFilter/operator</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="bee6522209514bfa96b04e4b35a0ce17"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>parameters[name == /filter/key]/alias</from>
+							<to>hubspotFilter/propertyName</to>
 						</steps>
 					</steps>
 					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
@@ -1994,15 +1994,6 @@
 						</steps>
 						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 								disabled="false"
-								id="c8ad308661a2449bbd143f87fc0d0f73"
-								mask="false"
-								optional="false"
-								fixedValue="false">
-							<from>filter/key</from>
-							<to>hubspotFilter/propertyName</to>
-						</steps>
-						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-								disabled="false"
 								id="f0e1521479794e3ca1fd1ff4c6923dff"
 								mask="false"
 								optional="false"
@@ -2010,21 +2001,21 @@
 							<from>NOT_IN</from>
 							<to>hubspotFilter/operator</to>
 						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="d463d8394eea45f59b3cdf39b4babb41"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>parameters[name == /filter/key]/alias</from>
+							<to>hubspotFilter/propertyName</to>
+						</steps>
 					</steps>
 					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 							comment="Map hubspot filter"
 							disabled="false"
 							id="e95425f1aa724cc7936314e742558695"
 							lineNumber="38">
-						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-								disabled="false"
-								id="bface3ab80bd4aa08710710c47985c88"
-								mask="false"
-								optional="false"
-								fixedValue="false">
-							<from>filter/key</from>
-							<to>hubspotFilter/propertyName</to>
-						</steps>
 						<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 								disabled="false"
 								id="a0317847a68e4a1e89a2103f8c6d28bc"
@@ -2063,6 +2054,15 @@
 								fixedValue="false">
 							<from>filter/values[0]</from>
 							<to>hubspotFilter/value</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="21b4d9433311437bb55c4bbd520b3ab2"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>parameters[name == /filter/key]/alias</from>
+							<to>hubspotFilter/propertyName</to>
 						</steps>
 					</steps>
 				</steps>

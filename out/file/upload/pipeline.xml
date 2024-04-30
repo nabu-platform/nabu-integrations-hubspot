@@ -1,0 +1,21 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="content" type="java.io.InputStream"/>
+        <field minOccurs="0" name="fileName" type="java.lang.String"/>
+        <field minOccurs="0" name="contentType" type="java.lang.String"/>
+        <field minOccurs="0" name="folderPath" type="java.lang.String"/>
+        <field minOccurs="0" name="folderId" type="java.lang.String"/>
+        <field minOccurs="0" name="access" type="nabu.integrations.hubspot.out.file.accessType"/>
+    </structure>
+    <structure name="output">
+        <structure definition="nabu.integrations.hubspot.out.file.response" name="response"/>
+    </structure>
+    <field name="endpoint" type="java.lang.String"/>
+    <field name="securityType" type="java.lang.String"/>
+    <field name="securityContext" type="java.lang.String"/>
+    <structure definition="be.nabu.libs.http.api.HTTPResponse" minOccurs="0" name="response"/>
+    <structure definition="be.nabu.libs.http.api.HTTPRequest" minOccurs="0" name="request"/>
+    <structure definition="be.nabu.libs.types.api.KeyValuePair" minOccurs="0" name="folderValue"/>
+    <structure definition="nabu.integrations.hubspot.out.file.fileMeta" name="meta"/>
+    <structure definition="be.nabu.libs.types.api.KeyValuePair" minOccurs="0" name="metaValue"/>
+</structure>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2024-04-23T09:06:12.015+02:00" lastModified="2024-04-24T17:20:29.264+02:00" leaf="true" version="34">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>be.nabu.libs.types.api.KeyValuePair</references>
+    <references>nabu.utils.Server.log</references>
+    <references>nabu.integrations.hubspot.out.file.fileMeta</references>
+    <references>nabu.data.mime.Services.getContent</references>
+    <references>nabu.integrations.hubspot.out.file.accessType</references>
+    <references>nabu.utils.Form.newMultiPartRequest</references>
+    <references>nabu.utils.Object.toString</references>
+    <references>nabu.protocols.http.client.Services.execute</references>
+    <references>be.nabu.libs.http.api.HTTPResponse</references>
+    <references>be.nabu.libs.http.api.HTTPRequest</references>
+    <references>nabu.integrations.hubspot.out.file.response</references>
+    <references>java.lang.String</references>
+    <references>nabu.data.json.Services.marshal</references>
+    <references>nabu.data.json.Services.unmarshal</references>
+    <references>java.io.InputStream</references>
+    <references>nabu.utils.Stream.toString</references>
+</node>

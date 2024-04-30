@@ -1,0 +1,4 @@
+<structure name="fileMeta">
+    <field name="access" type="nabu.integrations.hubspot.out.file.accessType"/>
+    <field comment="Currently unclear what the format is" minOccurs="0" name="ttl" type="java.lang.Long"/>
+</structure>

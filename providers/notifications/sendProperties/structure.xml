@@ -1,3 +1,5 @@
 <structure name="sendProperties">
     <field name="templateId" type="java.lang.Long"/>
+    <field minOccurs="0" name="whitelistedDomains" type="java.lang.String"/>
+    <field minOccurs="0" name="override" type="java.lang.String"/>
 </structure>

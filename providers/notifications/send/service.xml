@@ -57,10 +57,94 @@
 					message="No email address found"
 					whitelist="false" xsi:nil="true"/>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					id="13358c8f096f460ea4fe67e49427aab9"
+					label="input/properties/whitelistedDomains != null || input/properties/override != null"
+					lineNumber="6">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="ca4a2b5e949d4fba9bde65d1d7ceab8d"
+						serviceId="nabu.integrations.hubspot.providers.notifications.rewriteAddress"
+						resultName="resultf285b9846c0545bc8c386f216465c731"
+						temporaryMapping="true"
+						x="402"
+						y="165"
+						invocationOrder="1"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="b9c55e78ec714dc6b39acf44c2f9c8dc"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>address/address</from>
+						<to>email</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="2f0e097550a042599d5cebb80d030b5b"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>result62034c10887249e789f5b6ac66c39cc5/parts</from>
+						<to>whitelistedDomains</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="85327080439b4423b59529fbd61a68bc"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/properties/override</from>
+						<to>override</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="54e6f4c2312c4a96b660a3cae10198db"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>resultf285b9846c0545bc8c386f216465c731/email</from>
+					<to>address/address</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="e3c017f3c45e4e50a1276eab5ca62fc3"
+						serviceId="nabu.utils.String.split"
+						resultName="result62034c10887249e789f5b6ac66c39cc5"
+						temporaryMapping="true"
+						x="38"
+						y="10"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="40c54612b52a439fb95a5e523ae66958"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/properties/whitelistedDomains</from>
+						<to>string</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="0c11a29d09414602a9dd456fa5794f1b"
+							mask="false"
+							optional="false"
+							fixedValue="true">
+						<from>[\s]*,[\s]*</from>
+						<to>separator</to>
+					</steps>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Note that no event was returned in my tests so using the statusId"
 					disabled="false"
 					id="2bcf25628d3c4f7caf19590a0104a363"
-					lineNumber="6">
+					lineNumber="7">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="5496b93f73f1429f8ff54624b2b5777c"
@@ -188,13 +272,13 @@
 			<steps xsi:type="be.nabu.libs.services.vm.step.Catch"
 					disabled="false"
 					id="23f1daf50e05418eb5ae914197e380b9"
-					lineNumber="7"
+					lineNumber="8"
 					variable="exception">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						comment="Map main"
 						disabled="false"
 						id="43fd16283e894f139ae448bd934f1b9c"
-						lineNumber="8">
+						lineNumber="9">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
 							id="75b551b97bc3420fb323501a19f2e9ae"
@@ -209,7 +293,7 @@
 						comment="Map additional"
 						disabled="false"
 						id="f7ece0fcd13d4afdb7c80297e966cd92"
-						lineNumber="9">
+						lineNumber="10">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="a2f1e31dedac446e8a4dde97a59d68ad"
@@ -253,7 +337,7 @@
 				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 						disabled="false"
 						id="188181f769514d7b930fdf704015f836"
-						lineNumber="10">
+						lineNumber="11">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 							disabled="false"
 							id="d56d5e6f183f4ae09b608983f92dbafa"

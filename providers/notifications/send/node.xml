@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2024-03-27T16:04:50.330+01:00" lastModified="2024-03-29T12:23:40.246+01:00" leaf="true" version="24">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2024-03-27T16:04:50.330+01:00" lastModified="2024-04-30T11:45:41.882+02:00" leaf="true" version="28">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
@@ -8,6 +8,7 @@
     <references>nabu.utils.Runtime.summarizeException</references>
     <references>nabu.utils.List.add</references>
     <references>nabu.frameworks.notifications.specs.address</references>
+    <references>nabu.integrations.hubspot.providers.notifications.rewriteAddress</references>
     <references>nabu.frameworks.notifications.specs.send</references>
     <references>nabu.integrations.hubspot.out.transactional.api.services.send</references>
     <references>nabu.frameworks.notifications.specs.failedRecipient</references>
@@ -18,4 +19,5 @@
     <references>nabu.integrations.hubspot.providers.notifications.isFinalState</references>
     <references>java.lang.Object</references>
     <references>java.lang.String</references>
+    <references>nabu.utils.String.split</references>
 </node>
