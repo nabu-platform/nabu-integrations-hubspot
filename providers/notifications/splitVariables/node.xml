@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.glue.GlueServiceManager" created="2024-05-02T14:46:22.009+02:00" lastModified="2024-05-02T15:48:46.449+02:00" leaf="true" version="6">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.reflection.Type.of</references>
+    <references>nabu.utils.reflection.Type.describe</references>
+</node>

@@ -1,0 +1,20 @@
+variables ?= null
+
+type = nabu.utils.reflection.Type.of(variables)/typeId
+parameters = nabu.utils.reflection.Type.describe(type)/parameters
+
+# we assume all properties are custom properties
+# by setting the collection name to "contact", we explicitly map it to contact instead
+
+@return
+customProperties = structure()
+
+@return
+contactProperties = structure()
+
+for (parameter : parameters)
+	name = when(parameter/alias != null, parameter/alias, parameter/name)
+	if (parameter/collectionName == "contact")
+		contactProperties = structure(contactProperties, lambda(name): variables[/parameter/name])
+	else 
+		customProperties = structure(customProperties, lambda(name): variables[/parameter/name])

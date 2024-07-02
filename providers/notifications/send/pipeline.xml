@@ -5,4 +5,6 @@
     <structure name="output"/>
     <structure definition="nabu.frameworks.notifications.specs.failedRecipient" minOccurs="0" name="failed"/>
     <structure definition="nabu.frameworks.notifications.specs.address" minOccurs="0" name="address"/>
+    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" name="customProperties"/>
+    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" name="contactProperties"/>
 </structure>
