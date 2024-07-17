@@ -2,4 +2,7 @@
     <field name="templateId" type="java.lang.Long"/>
     <field minOccurs="0" name="whitelistedDomains" type="java.lang.String"/>
     <field minOccurs="0" name="override" type="java.lang.String"/>
+    <field comment="You can add comma separated BCC, https://knowledge.hubspot.com/connected-email/log-email-in-your-crm-with-the-bcc-or-forwarding-address" minOccurs="0" name="bcc" type="java.lang.String"/>
+    <field comment="You can add comma separated reply to" minOccurs="0" name="replyTo" type="java.lang.String"/>
+    <field comment="You can configure a from" minOccurs="0" name="from" type="java.lang.String"/>
 </structure>

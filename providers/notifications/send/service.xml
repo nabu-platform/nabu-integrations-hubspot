@@ -236,6 +236,33 @@
 						<from>contactProperties</from>
 						<to>parameters/body/contactProperties</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="6d65ac282e5a431bb351d6bfedb1bcd3"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>result12eab43d7f8949199a600ba7d9eb213e/parts</from>
+						<to>parameters/body/message/bcc</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="5f10b086981a42f89a738629ce536a7e"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>resultf2c53ebad36f41e6ad0891088b79f7b2/parts</from>
+						<to>parameters/body/message/replyTo</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="a60e8c5bb16e475093562d724a1f8a00"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/properties/from</from>
+						<to>parameters/body/message/from</to>
+					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
@@ -311,6 +338,66 @@
 						fixedValue="false">
 					<from>resultc67f0bcb11cd448c9ebfaf6b77539d75/final</from>
 					<to>output/instances[0]/externalStateFinal</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="8526fea2bbe547fbb8c4c914ac280cf8"
+						serviceId="nabu.utils.String.split"
+						resultName="result12eab43d7f8949199a600ba7d9eb213e"
+						temporaryMapping="true"
+						x="17"
+						y="52"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="db7f51577e9946ceaebd545a314e5f09"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/properties/bcc</from>
+						<to>string</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="01989ff80f924a3086b6b6525fbd162b"
+							mask="false"
+							optional="false"
+							fixedValue="true">
+						<from>[\s]*,[\s]*</from>
+						<to>separator</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="d5aaa0910def4c41a78c7a2f9323a9ad"
+						serviceId="nabu.utils.String.split"
+						resultName="resultf2c53ebad36f41e6ad0891088b79f7b2"
+						temporaryMapping="true"
+						x="2"
+						y="278"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="0ad9dcd63c114f4fbe72b8d2d0d78908"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/properties/replyTo</from>
+						<to>string</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="5f9cf069505649dfbf57eb302c5d23b1"
+							mask="false"
+							optional="false"
+							fixedValue="true">
+						<from>[\s]*,[\s]*</from>
+						<to>separator</to>
+					</steps>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Catch"

@@ -157,12 +157,20 @@
 				<to>output/hubspotOperator</to>
 			</steps>
 		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
-				description="=&quot;Unsupported operator: &quot; + input/nabuOperator"
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="Allow free text"
 				disabled="false"
-				id="80aa563c096f4260b51d24244cd75f03"
-				lineNumber="13"
-				message="Unsupported operator"
-				whitelist="false" xsi:nil="true"/>
+				id="82cca0ac7cba4ce0876ec0cb5f5aca07"
+				lineNumber="13">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="0d11cca3c38e4a1c8ab7f3690a26b6a5"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/nabuOperator</from>
+				<to>output/hubspotOperator</to>
+			</steps>
+		</steps>
 	</steps>
 </sequence>
