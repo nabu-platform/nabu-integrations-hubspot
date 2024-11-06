@@ -157,11 +157,18 @@
 				<to>output/hubspotOperator</to>
 			</steps>
 		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
+				disabled="false"
+				id="072c91fa59774760acba8e82d6562650"
+				label="&quot;not like&quot;"
+				lineNumber="13"
+				message="Currently 'not like' is not supported for hubspot"
+				whitelist="false" xsi:nil="true"/>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				comment="Allow free text"
 				disabled="false"
 				id="82cca0ac7cba4ce0876ec0cb5f5aca07"
-				lineNumber="13">
+				lineNumber="14">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
 					id="0d11cca3c38e4a1c8ab7f3690a26b6a5"
