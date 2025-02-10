@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.glue.GlueServiceManager" created="2025-02-05T16:04:33.415+01:00" lastModified="2025-02-05T16:05:11.132+01:00" leaf="true" version="3">
+    <environmentId>ares</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+</node>

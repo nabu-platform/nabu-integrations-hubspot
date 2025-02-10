@@ -18,3 +18,9 @@ for (parameter : parameters)
 		contactProperties = structure(contactProperties, lambda(name): variables[/parameter/name])
 	else 
 		customProperties = structure(customProperties, lambda(name): variables[/parameter/name])
+
+# for undefined documents we might not have any (or all) properties, we map the remaining keys to the custom properties
+names = resolve(parameters/name)
+for (key : keys(variables))
+	if (key !? names)
+		customProperties = structure(customProperties, lambda(key): variables[/key])

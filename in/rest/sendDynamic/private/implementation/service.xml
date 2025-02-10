@@ -1,0 +1,302 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="32cd903fdef04b90ac31a31e1bbbf8e5"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="a603e4e276e04b21b0f3cedf7b76da0f"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="0824b4fe7a874dce840fd04cff7f23cd"
+				serviceId="nabu.data.excel.Services.parse"
+				resultName="resultaf62452fc20e4d5c9e24fa519a0f85ba"
+				temporaryMapping="true"
+				x="81"
+				y="59"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="bb859123c33e4049ac01055fcfed8399"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content</from>
+				<to>stream</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="fab413abb9a34c6590974c5db3c135a9"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>XLSX</from>
+				<to>excelType</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="2d81a61330284220bcfb7e9abb7f9e50"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultaf62452fc20e4d5c9e24fa519a0f85ba/workbook</from>
+			<to>workbook</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="f29fd95e79e94fa6bbb3699237ed86bd"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="cea31f4683c140cfa70a59362b53346b"
+				serviceId="nabu.data.excel.Services.sheets"
+				resultName="result14109690828d42e4ac464afa0ca51e50"
+				temporaryMapping="true"
+				x="43"
+				y="33"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="0d643945faf34a1f8e29bf28a8069374"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>workbook</from>
+				<to>workbook</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="0da2957f587f458e8731ab9c8ae89bba"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result14109690828d42e4ac464afa0ca51e50/sheets</from>
+			<to>sheets</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="3f59cb6fdc50453ca9435fd1bc7b0c75"
+			lineNumber="4"
+			variable="sheet">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="44009ebe149c495d9ab2a9fbc3716f54"
+				lineNumber="5">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="56ec63bacee940d89fb35908b7320f37"
+					serviceId="nabu.data.excel.Services.toObject"
+					resultName="resultcd09a0af15ae4ff393299c3890db580d"
+					temporaryMapping="true"
+					x="77"
+					y="49"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="d83aed83efd3408a9984e5cfb71958fb"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>nabu.integrations.hubspot.in.rest.record</from>
+					<to>typeId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="6807bb8535be4fbc9a873ea95bc7f66d"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>workbook</from>
+					<to>workbook</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="7e12f935d1264e97883ad50a58a0b848"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>sheet</from>
+					<to>sheet</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="7fa8aec873a9479686a0adff7423d63c"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>true</from>
+					<to>useHeaders</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="521cdf1ab3f0473191e78d4c84cdbd42"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resultcd09a0af15ae4ff393299c3890db580d/results</from>
+				<to>records</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.For"
+				disabled="false"
+				id="01040e616a9a4dbea345d6ee1b58dd5a"
+				lineNumber="6"
+				variable="record">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+					disabled="false"
+					id="5dc49083397745daa62d2936731e6a73"
+					lineNumber="7">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+						disabled="false"
+						id="f010d84fbcaa4cb3b24941a6438c048b"
+						label="record/properties != null"
+						lineNumber="8">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="b71ae2155dcc4c829f5477eb04d402ee"
+							serviceId="nabu.integrations.hubspot.utils.properties2object"
+							resultName="result10cea7a3c7bf40098bd51e44e7bb12c7"
+							temporaryMapping="true"
+							x="196"
+							y="99"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="2dd4be0243554fb7b0d5bca107bf5b2b"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>record/properties</from>
+							<to>properties</to>
+						</steps>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="fff86bebfabd42178aba45c7a6c32c26"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>result10cea7a3c7bf40098bd51e44e7bb12c7/object</from>
+						<to>variables</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+						disabled="false"
+						id="de1d27bcf0554fcfb83c9d5d0d27ea43"
+						lineNumber="9">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+							disabled="false"
+							id="100081267105412198256614c21468ea"
+							path="variables" xsi:nil="true"/>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+							disabled="false"
+							id="7b7ec0c07ea14129b479eb122dc34f01"
+							path="language" xsi:nil="true"/>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Drop"
+							disabled="false"
+							id="a0a7f6c829654edea5cf2b9c5e5c97ee"
+							path="template" xsi:nil="true"/>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+							disabled="false"
+							id="58d118def8f4400a824b0c8790c6083d"
+							serviceId="nabu.integrations.hubspot.providers.notifications.send"
+							resultName="result4b59e7dc6ced478bb121f3c85c98a705"
+							temporaryMapping="true"
+							x="286"
+							y="20"
+							invocationOrder="0"
+							asynchronous="false"
+							recache="false">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="ec1cbf322bef482f90326e58ec60464e"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/path/templateId</from>
+							<to>template</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="8487e72e68a44a54814d8e002048da03"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/path/templateId</from>
+							<to>properties/templateId</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="df246178896a44729d51072b8d9224e3"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/query/bcc</from>
+							<to>properties/bcc</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="1bc5378a298547b199449e89c16c1087"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/query/replyTo</from>
+							<to>properties/replyTo</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="35ba687b0e5a4ac4921a7cd171a19647"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/query/from</from>
+							<to>properties/from</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="df8cc6a8e312423ba26976248620ca3c"
+								mask="false"
+								optional="false"
+								fixedValue="true">
+							<from>email</from>
+							<to>recipients[0]/addresses[0]/addressType</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="fd0fc8c4833942a7a258246f7e9b19e0"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>record/email</from>
+							<to>recipients[0]/addresses[0]/address</to>
+						</steps>
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="addeba74e3984a87ac5b8fa9aab6add3"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>variables</from>
+							<to>variables</to>
+						</steps>
+					</steps>
+				</steps>
+			</steps>
+			<query>records</query>
+		</steps>
+		<query>sheets</query>
+	</steps>
+</sequence>

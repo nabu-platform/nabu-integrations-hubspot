@@ -1,0 +1,10 @@
+<structure interface="nabu.integrations.hubspot.in.rest.sendDynamic:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="org.apache.poi.ss.usermodel.Workbook" minOccurs="0" name="workbook"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="sheets" type="java.lang.String"/>
+    <structure definition="java.lang.Object" name="variables"/>
+    <field minOccurs="0" name="template" type="java.lang.String"/>
+    <field minOccurs="0" name="language" type="java.lang.String"/>
+    <structure definition="nabu.integrations.hubspot.in.rest.record" maxOccurs="unbounded" minOccurs="0" name="records"/>
+</structure>

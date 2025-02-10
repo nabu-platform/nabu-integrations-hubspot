@@ -1,0 +1,6 @@
+be.nabu.libs.types.api.KeyValuePair[] properties ?= null
+
+@return
+object = structure()
+for (property : properties)
+	object[/property/key] = property/value
