@@ -51,15 +51,6 @@
 					<from>result/id</from>
 					<to>output/models[0]/id</to>
 				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
-						id="761cb62660f248278468c6302379dba0"
-						mask="false"
-						optional="false"
-						fixedValue="false">
-					<from>result/name</from>
-					<to>output/models[0]/collectionName</to>
-				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="e2f42aa949584b01a185de20ec936b07"
@@ -116,6 +107,15 @@
 						fixedValue="true">
 					<from>hubspot</from>
 					<to>output/models[0]/collectionCrudProvider</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="3689ada1159a4e2da0fb0d1f9ba0d1fb"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>result/fullyQualifiedName</from>
+					<to>output/models[0]/collectionName</to>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
