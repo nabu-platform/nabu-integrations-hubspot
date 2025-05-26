@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-10-04T09:12:35.892+02:00" lastModified="2025-05-08T15:51:16.203+02:00" leaf="true" version="33">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-10-04T09:12:35.892+02:00" lastModified="2025-05-26T09:41:45.702+02:00" leaf="true" version="37">
     <environmentId>ares</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties>
         <property key="name">Hubspot</property>
     </properties>
+    <references>nabu.utils.String.join</references>
     <references>nabu.integrations.hubspot.out.schemas.types.collectionResponseObjectSchemaNoPaging</references>
     <references>be.nabu.eai.module.types.structure.ModelGenerator.getModels</references>
     <references>nabu.integrations.hubspot.providers.mapTypes</references>

@@ -23,6 +23,7 @@
 				id="02c22d351b374bb5800693d010bd56fe"
 				mask="false"
 				optional="false"
+				patch="false"
 				fixedValue="false">
 			<from>result76240dad266447ba8759adbc80fbec12/ok/body</from>
 			<to>response</to>
@@ -39,6 +40,7 @@
 				id="50c6e5da6af746d096eec9a8d6edb9a2"
 				lineNumber="4">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					comment="Main mapping, check description for p_ prefix"
 					disabled="false"
 					id="0f702ab34c3d444cb8d06357ff44c507"
 					lineNumber="5">
@@ -47,6 +49,7 @@
 						id="499a621e650e4a7eb316c74cf29df4d7"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="false">
 					<from>result/id</from>
 					<to>output/models[0]/id</to>
@@ -67,6 +70,7 @@
 							id="4fbda02b1be94b1a8d5168b5c90a66a1"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>result/name</from>
 						<to>content</to>
@@ -76,6 +80,7 @@
 							id="51324a0ac8644c50a4c756bfaa63f9d6"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="true">
 						<from>UPPER_CAMEL_CASE</from>
 						<to>from</to>
@@ -85,6 +90,7 @@
 							id="08351a7b07cb46b3892815fa37d01b38"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="true">
 						<from>LOWER_CAMEL_CASE</from>
 						<to>to</to>
@@ -95,6 +101,7 @@
 						id="3c7cee1e3c8b46448c2e8888c8fb1130"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="false">
 					<from>result694394cd5a8946639c2cd3ea058bd7ea/conventionized</from>
 					<to>output/models[0]/name</to>
@@ -104,17 +111,51 @@
 						id="ab27722ff5c84bc59553038cd1c30aff"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>hubspot</from>
 					<to>output/models[0]/collectionCrudProvider</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="3a235d58e4054ca1a073a3d874c9229c"
+						serviceId="nabu.utils.String.join"
+						resultName="resultfa56090107274dbe98acd8d19011ddd5"
+						temporaryMapping="true"
+						x="588"
+						y="207"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="98fca992014e423b867a13db0350b0fc"
+							mask="false"
+							optional="false"
+							patch="false"
+							fixedValue="true">
+						<from>p_</from>
+						<to>parts[0]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="439151bfc2a14dfc80fde45d3da9794c"
+							mask="false"
+							optional="false"
+							patch="false"
+							fixedValue="false">
+						<from>result/name</from>
+						<to>parts[1]</to>
+					</steps>
+				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="3689ada1159a4e2da0fb0d1f9ba0d1fb"
+						id="60a43339a04948d59183e3b34e8d6592"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="false">
-					<from>result/fullyQualifiedName</from>
+					<from>resultfa56090107274dbe98acd8d19011ddd5/string</from>
 					<to>output/models[0]/collectionName</to>
 				</steps>
 			</steps>
@@ -128,6 +169,7 @@
 						id="77526a88c2764679a08d5fcb1e1def2d"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>id</from>
 					<to>output/models[0]/fields[0]/name</to>
@@ -137,6 +179,7 @@
 						id="e712ac510dd148f4b4384d58a709f5c1"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>string</from>
 					<to>output/models[0]/fields[0]/type</to>
@@ -146,6 +189,7 @@
 						id="d87f7d2ae82542eba98f70cd9c8b3936"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>The primary id field for this object</from>
 					<to>output/models[0]/fields[0]/description</to>
@@ -155,6 +199,7 @@
 						id="c761a073d8f04c0db639c093f215e8a4"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>true</from>
 					<to>output/models[0]/fields[0]/primaryKey</to>
@@ -175,6 +220,7 @@
 							id="3ea18ecd06bd4cfbbd96519302c3da62"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="true">
 						<from>1</from>
 						<to>output/models[0]/fields[0]/maxOccurs</to>
@@ -184,6 +230,7 @@
 							id="e240a0feb3ea4b28a5efa5bc07b2d597"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="true">
 						<from>1</from>
 						<to>output/models[0]/fields[0]/minOccurs</to>
@@ -193,6 +240,7 @@
 							id="c02a36922e1d48be856d0dd7a83a319b"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>property/label</from>
 						<to>output/models[0]/fields[0]/title</to>
@@ -213,6 +261,7 @@
 								id="728f44d8596a48c4aa9250619168e6b7"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="false">
 							<from>property/type</from>
 							<to>hubspotType</to>
@@ -222,6 +271,7 @@
 								id="2496cbe5ba874e78987dd352f0e188f5"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="false">
 							<from>property/name</from>
 							<to>name</to>
@@ -232,6 +282,7 @@
 							id="8ff6fea8814f446f9f01dfcc2a45fb54"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>result4d46986b134b46d89d7d7e9de09ca7da/internalType</from>
 						<to>output/models[0]/fields[0]/type</to>
@@ -241,6 +292,7 @@
 							id="78d91406b9aa4837a6d29d25e416d89a"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>property/name</from>
 						<to>output/models[0]/fields[0]/alias</to>
@@ -261,6 +313,7 @@
 								id="c109036d030e4ec7811fc4e9b68e5a96"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="false">
 							<from>property/name</from>
 							<to>content</to>
@@ -270,6 +323,7 @@
 								id="cb7691420e874d6591c952f8d6c167a8"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="true">
 							<from>UNDERSCORE</from>
 							<to>from</to>
@@ -279,6 +333,7 @@
 								id="8fc365a5594e4b138d1526cf28a778f6"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="true">
 							<from>LOWER_CAMEL_CASE</from>
 							<to>to</to>
@@ -289,6 +344,7 @@
 							id="4ddb9b6f86ff49a1a346de9b7e9038bb"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>result59208268af0a4d06bb02f2d63b8b19eb/conventionized</from>
 						<to>output/models[0]/fields[0]/name</to>
@@ -298,6 +354,7 @@
 							id="b8c69ba067114451bd217b0a8e8b14f5"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>result4d46986b134b46d89d7d7e9de09ca7da/format</from>
 						<to>output/models[0]/fields[0]/format</to>
@@ -317,6 +374,7 @@
 								id="ab325f4c77b64f01b073cd4730cd150a"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="true">
 							<from>1</from>
 							<to>output/models[0]/fields[0]/minOccurs</to>
@@ -331,6 +389,7 @@
 								id="2db0776ca3f145b0bb746081d45b5da6"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="true">
 							<from>0</from>
 							<to>output/models[0]/fields[0]/minOccurs</to>
@@ -375,6 +434,7 @@
 				id="51991096d61948e0b0fb4e355e05122f"
 				mask="false"
 				optional="false"
+				patch="false"
 				fixedValue="false">
 			<from>resultc52f357b2fb543c38b162ee0bcaa0687/builtinTypes</from>
 			<to>builtinTypes</to>
@@ -399,6 +459,7 @@
 						id="d1203d852d454e22b7c17abf9b305346"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>="builtin:" + builtinType</from>
 					<to>output/models[0]/id</to>
@@ -419,6 +480,7 @@
 							id="63e7cdc7e75a42519ca08764edc5bdab"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>builtinType</from>
 						<to>parameters/objectType</to>
@@ -429,6 +491,7 @@
 						id="e580ad2b661041efb2d23ad20c187509"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="false">
 					<from>result29df2e856d6848ae94106d5f043afcd0/ok/body/results</from>
 					<to>properties</to>
@@ -438,6 +501,7 @@
 						id="df989d76f27c4f6c9f43ea0be668e285"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="false">
 					<from>builtinType</from>
 					<to>output/models[0]/collectionName</to>
@@ -447,6 +511,7 @@
 						id="08b3105fce9c4c8e89123e6eb68e5473"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="false">
 					<from>builtinType</from>
 					<to>output/models[0]/name</to>
@@ -456,6 +521,7 @@
 						id="6206a130bbcd487e85e10c9cd2b1e670"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>hubspot</from>
 					<to>output/models[0]/collectionCrudProvider</to>
@@ -471,6 +537,7 @@
 						id="1df50677a1f34c248bebab9b77e69bdb"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>id</from>
 					<to>output/models[0]/fields[0]/name</to>
@@ -480,6 +547,7 @@
 						id="b23e264e5294406d8ebb82a9d142837e"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>string</from>
 					<to>output/models[0]/fields[0]/type</to>
@@ -489,6 +557,7 @@
 						id="98cc56d4b3214cd79308e1d9a7b50a45"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>The primary id field for this object</from>
 					<to>output/models[0]/fields[0]/description</to>
@@ -498,6 +567,7 @@
 						id="4038ebbd24fd4d6f9f6b75cdeddb44c0"
 						mask="false"
 						optional="false"
+						patch="false"
 						fixedValue="true">
 					<from>true</from>
 					<to>output/models[0]/fields[0]/primaryKey</to>
@@ -518,6 +588,7 @@
 							id="24d7ac8d00774fe8b8d3fbb19e17938c"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="true">
 						<from>1</from>
 						<to>output/models[0]/fields[0]/maxOccurs</to>
@@ -527,6 +598,7 @@
 							id="49a523b2286e422e99d1bded3362bbcb"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="true">
 						<from>1</from>
 						<to>output/models[0]/fields[0]/minOccurs</to>
@@ -536,6 +608,7 @@
 							id="8f9fc9e54eab45d0ab496386bf5fe5ea"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>property/label</from>
 						<to>output/models[0]/fields[0]/title</to>
@@ -556,6 +629,7 @@
 								id="7220a6eb5ae04331bee7d46b97f0c4d0"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="false">
 							<from>property/type</from>
 							<to>hubspotType</to>
@@ -565,6 +639,7 @@
 								id="2296cbb0d9da4c4d87848d79a7ef75d6"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="false">
 							<from>property/name</from>
 							<to>name</to>
@@ -575,6 +650,7 @@
 							id="323fd7ac8c5f434a81017804269b8dc0"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>result4d46986b134b46d89d7d7e9de09ca7da/internalType</from>
 						<to>output/models[0]/fields[0]/type</to>
@@ -584,6 +660,7 @@
 							id="11e480b8b87245989ffa8b36d178980f"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>property/name</from>
 						<to>output/models[0]/fields[0]/alias</to>
@@ -604,6 +681,7 @@
 								id="e1ff49692576482ab82e29c9161150d0"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="false">
 							<from>property/name</from>
 							<to>content</to>
@@ -613,6 +691,7 @@
 								id="052022a935e4414e89196ad5d7794bda"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="true">
 							<from>UNDERSCORE</from>
 							<to>from</to>
@@ -622,6 +701,7 @@
 								id="562334278d434d6fb22ac9a3d6ee1a55"
 								mask="false"
 								optional="false"
+								patch="false"
 								fixedValue="true">
 							<from>LOWER_CAMEL_CASE</from>
 							<to>to</to>
@@ -632,6 +712,7 @@
 							id="dfab7fcebbc34e9daba28cdd2516b569"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>result59208268af0a4d06bb02f2d63b8b19eb/conventionized</from>
 						<to>output/models[0]/fields[0]/name</to>
@@ -641,6 +722,7 @@
 							id="68717d777c9d45718622ff474b495d31"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="false">
 						<from>result4d46986b134b46d89d7d7e9de09ca7da/format</from>
 						<to>output/models[0]/fields[0]/format</to>
@@ -656,6 +738,7 @@
 							id="9e55d8f89b08458a9bff02eccc75c331"
 							mask="false"
 							optional="false"
+							patch="false"
 							fixedValue="true">
 						<from>0</from>
 						<to>output/models[0]/fields[0]/minOccurs</to>

@@ -1,0 +1,4 @@
+In 2025 hubspot is breaking the way we can reference custom objects: https://developers.hubspot.com/changelog/breaking-change-removed-support-for-referencing-custom-object-types-by-base-name
+
+The first attempt to resolve this was to use the fully qualified name, however this is _different_ in sandbox vs prd! The same goes for the objectTypeId.
+So if you want to statically reference the same custom object in sandbox and prd, the only way to do that is with the p_ shorthand.
