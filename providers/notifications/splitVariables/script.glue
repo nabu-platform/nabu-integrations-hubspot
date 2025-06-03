@@ -13,11 +13,15 @@ customProperties = structure()
 contactProperties = structure()
 
 for (parameter : parameters)
-	name = when(parameter/alias != null, parameter/alias, parameter/name)
-	if (parameter/collectionName == "contact")
-		contactProperties = structure(contactProperties, lambda(name): variables[/parameter/name])
-	else 
-		customProperties = structure(customProperties, lambda(name): variables[/parameter/name])
+	# only map it if it has _a_ value, otherwise we will add a null field which will be seen as mandatory and end up in the resulting JSON
+	# however hubspot does not like null values in the properties and will throw a vague exception, for example when we sent "auditor: null", we got this:
+	# {"status":"error","message":"Invalid input JSON on line 1, column 490: customProperties value for key: auditor","correlationId":"dd367c9d-8e83-4420-b95b-44ae98f61bc5","category":"VALIDATION_ERROR"}
+	if (variables[/parameter/name] != null)
+		name = when(parameter/alias != null, parameter/alias, parameter/name)
+		if (parameter/collectionName == "contact")
+			contactProperties = structure(contactProperties, lambda(name): variables[/parameter/name])
+		else 
+			customProperties = structure(customProperties, lambda(name): variables[/parameter/name])
 
 # for undefined documents we might not have any (or all) properties, we map the remaining keys to the custom properties
 names = resolve(parameters/name)
