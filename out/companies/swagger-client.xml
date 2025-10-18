@@ -33,6 +33,8 @@
     <operationIds>putCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectTypeToObjectId</operationIds>
     <operationIds>deleteCrmV4ObjectsCompaniesCompanyIdAssociationsToObjectTypeToObjectId</operationIds>
     <operationIds>postCrmV3ObjectsCompaniesBatchRead</operationIds>
+    <operationIds>postCrmV3ObjectsCompaniesMerge</operationIds>
     <showInterfaces>false</showInterfaces>
     <throwException>true</throwException>
+    <typeAliases/>
 </swaggerClient>
