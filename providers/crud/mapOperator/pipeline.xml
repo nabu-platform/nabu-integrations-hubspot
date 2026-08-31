@@ -1,8 +1,10 @@
 <structure name="pipeline">
-    <structure name="input">
-        <field name="nabuOperator" type="java.lang.String"/>
-    </structure>
-    <structure name="output">
-        <field name="hubspotOperator" type="java.lang.String"/>
-    </structure>
+	<structure name="input">
+		<field name="nabuOperator" type="java.lang.String"/>
+		<field minOccurs="0" name="value" type="java.lang.String"/>
+	</structure>
+	<structure name="output">
+		<field name="hubspotOperator" type="java.lang.String"/>
+		<field name="hasValue" type="java.lang.Boolean"/>
+	</structure>
 </structure>

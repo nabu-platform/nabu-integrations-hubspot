@@ -1,4 +1,13 @@
 <sequence id="53ef68008adf452dae4a8f5a1d2fbd30">
+	<map id="1f142cca93dc4b5fa50550448597d473"
+		comment="Limit appears to be mandatory, otherwise you do get a count back but no actual records"
+		label="input/limit == null">
+		<link id="e1295e9a49b8496e8f576297076a1f5a"
+			fixedValue="true">
+			<from>100</from>
+			<to>input/limit</to>
+		</link>
+	</map>
 	<map id="4017c962f74b4bbe801879829ad48ba2">
 		<invoke id="cee65980891d4db28868c5d230833080"
 			resultName="result605c228778de4e5cb928696895e33550"
@@ -587,6 +596,7 @@
 					label="amountOfValues &gt;= 2">
 					<for id="40ea6bc4d3e24501895160f6a5e9b499"
 						into="getAllIds"
+						query="input/filters/values"
 						variable="value">
 						<map id="12991fddbba849118d07dc7cb193edcb">
 							<link id="724409e82c5a4e52a752b1628486a5f0">
@@ -594,7 +604,6 @@
 								<to>getAllIds[0]/id</to>
 							</link>
 						</map>
-						<query>input/filters/values</query>
 					</for>
 					<switch id="91603286baf5488a8b59bc4b9a4034f0">
 						<map id="e61131f9b66c421f82f4ab846ffe784b"
@@ -901,6 +910,7 @@
 		</sequence>
 		<sequence id="10dcf94b45214e46a26a471cece165fe">
 			<for id="03a1562ac64f44af959ce7872a55f74a"
+				query="input/filters"
 				variable="filter">
 				<map id="0b4dc621311e41c9a0591b0c60ec6ca2">
 					<invoke id="84d86840bdc6435eba4c565ef376a418"
@@ -916,6 +926,11 @@
 					<link id="508b94679f484e558f9fac0766e2f544">
 						<from>resultae80e62688ec412a99b070061d39a7c0/size</from>
 						<to>sizeOfList</to>
+					</link>
+					<link id="e65b5e34e1ec4f81836bb949a7a8873d"
+						fixedValue="true">
+						<from>true</from>
+						<to>hasValue</to>
 					</link>
 				</map>
 				<map id="30331f7c7016424e8eec5b79ff74e17e"
@@ -971,7 +986,8 @@
 						</link>
 					</map>
 					<map id="e95425f1aa724cc7936314e742558695"
-						comment="Map hubspot filter">
+						comment="Map hubspot filter. For &quot;is null&quot; and &quot;is not null&quot;, we need an explicit value indicating you want it or not."
+						label="(filter/operator != &quot;is null&quot; &amp;&amp; filter/operator != &quot;is not null&quot;) || (sizeOfList == 1 &amp;&amp; null !# filter/values)">
 						<invoke id="a0317847a68e4a1e89a2103f8c6d28bc"
 							resultName="result62dfae217663409ebc10c6a0485feb83"
 							serviceId="nabu.integrations.hubspot.providers.crud.mapOperator"
@@ -980,6 +996,10 @@
 							<link id="d67df0ece91541919f902a98a8c1291e">
 								<from>filter/operator</from>
 								<to>nabuOperator</to>
+							</link>
+							<link id="840d14946dbc4bf68d9e6ab7eefbc167">
+								<from>filter/values[0]</from>
+								<to>value</to>
 							</link>
 						</invoke>
 						<link id="0529719aa9164d9c8e6e16b4180e148e">
@@ -994,8 +1014,24 @@
 							<from>parameters[name == /filter/key]/alias</from>
 							<to>hubspotFilter/propertyName</to>
 						</link>
+						<link id="686b88041d714bcda470d52db5ebcf99">
+							<from>result62dfae217663409ebc10c6a0485feb83/hasValue</from>
+							<to>hasValue</to>
+						</link>
 					</map>
+					<break id="398e3751266548b0a67f4b6e6d8a0bfd"
+						label="(filter/operator == &quot;is null&quot; || filter/operator == &quot;is not null&quot;) &amp;&amp; (sizeOfList == 0 || null # filter/values)">
+						<count>1</count>
+						<continueExecution>true</continueExecution>
+					</break>
 				</switch>
+				<map id="4e4aa2fdf5db4a68976928c2a3c7f8a7"
+					label="!hasValue">
+					<drop id="23d73b7748e841b58c0bca52d83d5ccf"
+						path="hubspotFilter/value"/>
+					<drop id="2aa4b0d4ee864f4e8dc8b44b3652f30d"
+						path="hubspotFilter/values"/>
+				</map>
 				<map id="3881ff04dce046219e0e3daa86baa099"
 					comment="Add it">
 					<invoke id="13359b849f3f473b88862b7b8203b8cf"
@@ -1046,7 +1082,6 @@
 					<drop id="710e4ccadc10487e9c6a413a6a346fd7"
 						path="lastFilterGroup"/>
 				</map>
-				<query>input/filters</query>
 			</for>
 			<switch id="5f22725df47f4701ad1e393e52a4e501">
 				<map id="03cad5372b3a45dcac6109776321d743"
@@ -1559,6 +1594,7 @@
 	</switch>
 	<for id="e403956574da4080a14bc5278d5ae8de"
 		into="output/results/results"
+		query="results"
 		variable="result">
 		<map id="f9aa6cb050f94b0daa30402fda138408">
 			<invoke id="c687072f8ee84b8bbad8177af066f428"
@@ -1599,6 +1635,7 @@
 			</invoke>
 		</map>
 		<for id="cad57d89628f478785a033b65dddd52e"
+			query="parameters[name != &quot;id&quot;]"
 			variable="parameter">
 			<map id="2d2c320dad0444dcb8987d50742fc8e3">
 				<invoke id="90c2a3d3415d46a6becf33be935286c7"
@@ -1635,8 +1672,6 @@
 					</link>
 				</invoke>
 			</map>
-			<query>parameters[name != "id"]</query>
 		</for>
-		<query>results</query>
 	</for>
 </sequence>

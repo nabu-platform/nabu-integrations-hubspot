@@ -1,183 +1,158 @@
-<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		disabled="false"
-		id="027918468c0a45bebf48cad756536745"
-		lineNumber="1">
-	<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
-			disabled="false"
-			id="8e280b693c724c42a867784f6fd3a154"
-			lineNumber="2"
-			query="input/nabuOperator">
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="1de2726d3c854b25bdd4bb718d90d6e6"
-				label="&quot;=&quot;"
-				lineNumber="3">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="716f91bfd05a43c6a7ae7b9f49ca5250"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+<sequence id="027918468c0a45bebf48cad756536745">
+	<map id="50a9d05fd7c04ec79245518b025cb41e">
+		<link id="357d8b41eb964e38a5e4d6f26b5d2665"
+			fixedValue="true">
+			<from>true</from>
+			<to>output/hasValue</to>
+		</link>
+	</map>
+	<switch id="8e280b693c724c42a867784f6fd3a154"
+		query="input/nabuOperator">
+		<map id="1de2726d3c854b25bdd4bb718d90d6e6"
+			label="&quot;=&quot;">
+			<link id="716f91bfd05a43c6a7ae7b9f49ca5250"
+				fixedValue="true">
 				<from>EQ</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="8da63e00e0a2466e97fce921c7873d69"
-				label="&quot;&gt;&quot;"
-				lineNumber="4">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="6e3b0ee976ef463b8fa449f917b7642d"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="8da63e00e0a2466e97fce921c7873d69"
+			label="&quot;&gt;&quot;">
+			<link id="6e3b0ee976ef463b8fa449f917b7642d"
+				fixedValue="true">
 				<from>GT</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="2b6ce8f221d14db0a26b46afa31df228"
-				label="&quot;&gt;=&quot;"
-				lineNumber="5">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="21447e9c7a5e4cd5b7f3dcad6350c3c5"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="2b6ce8f221d14db0a26b46afa31df228"
+			label="&quot;&gt;=&quot;">
+			<link id="21447e9c7a5e4cd5b7f3dcad6350c3c5"
+				fixedValue="true">
 				<from>GTE</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="2fe8f098e2d74559846255ebf920765f"
-				label="&quot;&lt;&quot;"
-				lineNumber="6">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="84e8f7d42a474f94b0027c13df7b0da6"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="2fe8f098e2d74559846255ebf920765f"
+			label="&quot;&lt;&quot;">
+			<link id="84e8f7d42a474f94b0027c13df7b0da6"
+				fixedValue="true">
 				<from>LT</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="79636c88a50446cf967ae232e0f1dd81"
-				label="&quot;&lt;=&quot;"
-				lineNumber="7">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="d8173c84f37544eea3cb4b7086c8e86e"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="79636c88a50446cf967ae232e0f1dd81"
+			label="&quot;&lt;=&quot;">
+			<link id="d8173c84f37544eea3cb4b7086c8e86e"
+				fixedValue="true">
 				<from>LTE</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="e0bc363fb8f64ba1b2f0946b0c9b3692"
-				label="&quot;!#&quot;"
-				lineNumber="8">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="9eb5e93f45b946338a7afb3e82c356ff"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="e0bc363fb8f64ba1b2f0946b0c9b3692"
+			label="&quot;!#&quot;">
+			<link id="9eb5e93f45b946338a7afb3e82c356ff"
+				fixedValue="true">
 				<from>NOT_IN</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="caff7b1a834e43eb98eb19c31fc6df2b"
-				label="&quot;#&quot;"
-				lineNumber="9">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="48a878dfe6204ce1a577b91788abb5c7"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="caff7b1a834e43eb98eb19c31fc6df2b"
+			label="&quot;#&quot;">
+			<link id="48a878dfe6204ce1a577b91788abb5c7"
+				fixedValue="true">
 				<from>IN</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="1563f29691a14d82806382b75562d18b"
-				label="&quot;like&quot;"
-				lineNumber="10">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="a7d649ba46324fd2906423c42f0209a4"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="1563f29691a14d82806382b75562d18b"
+			label="&quot;like&quot;">
+			<link id="a7d649ba46324fd2906423c42f0209a4"
+				fixedValue="true">
 				<from>CONTAINS_TOKEN</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="0e8e4ebe383649519200fe5b188e5404"
-				label="&quot;=~&quot;"
-				lineNumber="11">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="eeb242cfc7354252b2b6fd9d9f5a277c"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="0e8e4ebe383649519200fe5b188e5404"
+			label="&quot;=~&quot;">
+			<link id="eeb242cfc7354252b2b6fd9d9f5a277c"
+				fixedValue="true">
 				<from>CONTAINS_TOKEN</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				disabled="false"
-				id="722cc0d790904cb7aaad3b9c265edec6"
-				label="&quot;!=~&quot;"
-				lineNumber="12">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="720bc54e66594b9ca43d49d7b041a64d"
-					mask="false"
-					optional="false"
-					fixedValue="true">
+			</link>
+		</map>
+		<map id="722cc0d790904cb7aaad3b9c265edec6"
+			label="&quot;!=~&quot;">
+			<link id="720bc54e66594b9ca43d49d7b041a64d"
+				fixedValue="true">
 				<from>NOT_CONTAINS_TOKEN</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Throw"
-				disabled="false"
-				id="072c91fa59774760acba8e82d6562650"
-				label="&quot;not like&quot;"
-				lineNumber="13"
-				message="Currently 'not like' is not supported for hubspot"
-				whitelist="false" xsi:nil="true"/>
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-				comment="Allow free text"
-				disabled="false"
-				id="82cca0ac7cba4ce0876ec0cb5f5aca07"
-				lineNumber="14">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-					disabled="false"
-					id="0d11cca3c38e4a1c8ab7f3690a26b6a5"
-					mask="false"
-					optional="false"
-					fixedValue="false">
+			</link>
+		</map>
+		<switch id="a2545a03821b4cfe8788aea032ae4eb8"
+			label="&quot;is null&quot;">
+			<map id="8a6e0386152d4f8fb4796bf75bd7c2b8"
+				label="input/value == &quot;false&quot;">
+				<link id="db662451e8c048e9963cdd8d3c7dda66"
+					fixedValue="true">
+					<from>HAS_PROPERTY</from>
+					<to>output/hubspotOperator</to>
+				</link>
+				<link id="c6c151b4f0c74cedbcd1c56853049ff7"
+					fixedValue="true">
+					<from>false</from>
+					<to>output/hasValue</to>
+				</link>
+			</map>
+			<map id="e5a9891840724292b5f51f768dc9ba46">
+				<link id="887006bcb9224d20917ae7154bd601a5"
+					fixedValue="true">
+					<from>NOT_HAS_PROPERTY</from>
+					<to>output/hubspotOperator</to>
+				</link>
+				<link id="0a72b4a18c534fbfb9a6a29882207c97"
+					fixedValue="true">
+					<from>false</from>
+					<to>output/hasValue</to>
+				</link>
+			</map>
+		</switch>
+		<switch id="8e22069aab1c461184c92a87fc8ec7fc"
+			label="&quot;is not null&quot;">
+			<map id="6237fec69cfc4bfa9191391beddc2155"
+				label="input/value == &quot;false&quot;">
+				<link id="ab28e347b2ce4f898b339656faa7393c"
+					fixedValue="true">
+					<from>NOT_HAS_PROPERTY</from>
+					<to>output/hubspotOperator</to>
+				</link>
+				<link id="b6f9913cd3f74e5695c6348c1f938dbf"
+					fixedValue="true">
+					<from>false</from>
+					<to>output/hasValue</to>
+				</link>
+			</map>
+			<map id="a140c052942c46b39a332ae85a8bcff4">
+				<link id="6fa701f7fddc44f0aeceb8b01059a699"
+					fixedValue="true">
+					<from>HAS_PROPERTY</from>
+					<to>output/hubspotOperator</to>
+				</link>
+				<link id="651300de7ea84a88a337c77c08e2b1f2"
+					fixedValue="true">
+					<from>false</from>
+					<to>output/hasValue</to>
+				</link>
+			</map>
+		</switch>
+		<throw id="072c91fa59774760acba8e82d6562650"
+			label="&quot;not like&quot;"
+			message="Currently 'not like' is not supported for hubspot"/>
+		<map id="82cca0ac7cba4ce0876ec0cb5f5aca07"
+			comment="Allow free text">
+			<link id="0d11cca3c38e4a1c8ab7f3690a26b6a5">
 				<from>input/nabuOperator</from>
 				<to>output/hubspotOperator</to>
-			</steps>
-		</steps>
-	</steps>
+			</link>
+		</map>
+	</switch>
 </sequence>

@@ -1,0 +1,1 @@
+It is unclear if HUBSPOT_DEFINED is always the association type to use but it _should_ work for both standard and custom objects.

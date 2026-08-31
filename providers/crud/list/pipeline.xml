@@ -3,14 +3,15 @@
 	<structure name="output"/>
 	<field name="typeName" type="java.lang.String"/>
 	<structure definition="nabu.utils.types.ParameterDescription" maxOccurs="unbounded" minOccurs="0" name="parameters"/>
-	<structure definition="nabu.integrations.hubspot.out.objects.types.collectionResponseSimplePublicObjectWithAssociationsForwardPaging" name="body" namespace="nabu.integrations.hubspot.out.objects.types"/>
+	<structure definition="nabu.integrations.hubspot.out.objects.types.collectionResponseSimplePublicObjectWithAssociationsForwardPaging" name="body"/>
 	<structure definition="nabu.integrations.hubspot.providers.crud.state" name="queryState"/>
-	<structure definition="nabu.integrations.hubspot.out.objects.types.filterGroup" maxOccurs="unbounded" minOccurs="0" name="filterGroups" namespace="nabu.integrations.hubspot.out.objects.types"/>
-	<structure definition="nabu.integrations.hubspot.out.objects.types.filterGroup" name="lastFilterGroup" namespace="nabu.integrations.hubspot.out.objects.types"/>
-	<structure definition="nabu.integrations.hubspot.out.objects.types.filter" name="hubspotFilter" namespace="nabu.integrations.hubspot.out.objects.types"/>
-	<structure definition="nabu.integrations.hubspot.out.objects.types.simplePublicObject" maxOccurs="unbounded" minOccurs="0" name="results" namespace="nabu.integrations.hubspot.out.objects.types"/>
+	<structure definition="nabu.integrations.hubspot.out.objects.types.filterGroup" maxOccurs="unbounded" minOccurs="0" name="filterGroups"/>
+	<structure definition="nabu.integrations.hubspot.out.objects.types.filterGroup" name="lastFilterGroup"/>
+	<structure definition="nabu.integrations.hubspot.out.objects.types.filter" name="hubspotFilter"/>
+	<structure definition="nabu.integrations.hubspot.out.objects.types.simplePublicObject" maxOccurs="unbounded" minOccurs="0" name="results"/>
 	<field minOccurs="0" name="sizeOfList" type="java.lang.Integer"/>
 	<field minOccurs="0" name="amountOfFilters" type="java.lang.Integer"/>
 	<field minOccurs="0" name="amountOfValues" type="java.lang.Integer"/>
-	<structure definition="nabu.integrations.hubspot.out.companies.types.simplePublicObjectId" maxOccurs="unbounded" minOccurs="0" name="getAllIds" namespace="nabu.integrations.hubspot.out.companies.types"/>
+	<structure definition="nabu.integrations.hubspot.out.companies.types.simplePublicObjectId" maxOccurs="unbounded" minOccurs="0" name="getAllIds"/>
+	<field name="hasValue" type="java.lang.Boolean"/>
 </structure>

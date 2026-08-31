@@ -1,4 +1,5 @@
 API Catalog: https://api.hubspot.com/api-catalog-public/v1/apis
+https://github.com/HubSpot/HubSpot-public-api-spec-collection 
 
 # Tickets
 
