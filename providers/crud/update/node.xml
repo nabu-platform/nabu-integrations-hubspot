@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-10-11T10:14:02.599+02:00" lastModified="2023-10-12T11:00:21.201+02:00" leaf="true" version="26">
-    <environmentId>apollo</environmentId>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-10-11T10:14:02.599+02:00" lastModified="2026-09-14T11:55:07.553+02:00" leaf="true" version="27">
+    <environmentId>ares</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
@@ -12,6 +12,7 @@
     <references>nabu.integrations.hubspot.out.quotes.services.update</references>
     <references>nabu.utils.types.ParameterDescription</references>
     <references>nabu.integrations.hubspot.out.companies.services.update</references>
+    <references>nabu.integrations.hubspot.providers.crud.stringifyNull</references>
     <references>nabu.integrations.hubspot.out.contacts.services.update</references>
     <references>be.nabu.eai.module.services.crud.api.CRUDProvider.update</references>
     <references>nabu.utils.reflection.Type.details</references>

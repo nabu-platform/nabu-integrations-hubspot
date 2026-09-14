@@ -1,0 +1,8 @@
+@return
+object ?= null
+
+# it appears that setting a "null" value does not actually reset the value, we need an empty "string"
+for (key : script.keys(object, true))
+	if (key != "id" && object[/key] == null)
+		object[/key] = ""
+	
